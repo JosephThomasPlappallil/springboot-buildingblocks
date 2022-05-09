@@ -1,0 +1,1 @@
+INSERT INTO employee(id,EMP_NAME,FIRST_NAME,LAST_NAME,EMAIL,ROLE,SSN) VALUES(1,'Joseph','Joseph','Thomas','jt287561@gmail.com','Developer','287564'); 
