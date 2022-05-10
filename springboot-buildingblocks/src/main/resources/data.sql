@@ -1,1 +1,3 @@
 INSERT INTO employee(id,EMP_NAME,FIRST_NAME,LAST_NAME,EMAIL,ROLE,SSN) VALUES(1,'Joseph','Joseph','Thomas','jt287561@gmail.com','Developer','287564'); 
+INSERT INTO employee(id,EMP_NAME,FIRST_NAME,LAST_NAME,EMAIL,ROLE,SSN) VALUES(2,'Alan','Alan','Thomas','alan422@gmail.com','Developer','2875641');
+INSERT INTO employee(id,EMP_NAME,FIRST_NAME,LAST_NAME,EMAIL,ROLE,SSN) VALUES(3,'Arun','Arun','Mathew','arun422@gmail.com','Developer','4875641');
