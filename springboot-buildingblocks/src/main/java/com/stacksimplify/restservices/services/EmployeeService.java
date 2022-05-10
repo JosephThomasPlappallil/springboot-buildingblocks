@@ -1,9 +1,11 @@
 package com.stacksimplify.restservices.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.stacksimplify.restservices.entities.Employee;
 import com.stacksimplify.restservices.repositories.EmployeeRepository;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,6 +32,21 @@ public class EmployeeService {
     //CreateEmployee Method
     public Employee createEmployee(Employee employee){
 
+        return employeeRepository.save(employee);
+
+    }
+
+    //getEmployeeById
+    public Optional<Employee> getEmployeeById(Long id){
+
+        Optional<Employee> employee = employeeRepository.findById(id);
+        return employee;
+    } 
+
+    //updateEmployeeById
+    public Employee updateEmployeeById(Long id,Employee employee){
+
+        employee.setId(id);
         return employeeRepository.save(employee);
 
     }

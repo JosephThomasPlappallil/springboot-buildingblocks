@@ -7,12 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
-//Controller
+//Controller 
 @RestController
 public class EmployeeController {
 
@@ -35,6 +38,21 @@ public class EmployeeController {
     public Employee createEmployee(@RequestBody Employee employee){
 
         return employeeService.createEmployee(employee);
+    }
+
+    //getEmployeeById
+
+    @GetMapping("/employees/{id}")
+    public Optional<Employee> getEmployeeById(@PathVariable("id") Long id){
+        return employeeService.getEmployeeById(id);
+    }
+
+    //updateEmployeeById
+
+    @PutMapping("employees/{id}")
+    public Employee updateEmployeeById(@PathVariable("id") Long id, @RequestBody Employee employee){
+
+        return employeeService.updateEmployeeById(id, employee);
     }
 
 }
