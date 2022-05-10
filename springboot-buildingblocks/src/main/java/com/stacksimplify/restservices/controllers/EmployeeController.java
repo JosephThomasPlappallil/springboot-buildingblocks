@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -53,6 +55,12 @@ public class EmployeeController {
     public Employee updateEmployeeById(@PathVariable("id") Long id, @RequestBody Employee employee){
 
         return employeeService.updateEmployeeById(id, employee);
+    }
+
+    //deleteUserById
+    @DeleteMapping("/employees/{id}")
+    public void deleteEmployeeBYId(@PathVariable("id")Long id){
+        employeeService.deleteEmployeeById(id);
     }
 
 }

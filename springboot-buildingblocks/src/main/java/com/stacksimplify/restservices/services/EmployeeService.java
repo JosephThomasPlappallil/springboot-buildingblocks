@@ -50,4 +50,13 @@ public class EmployeeService {
         return employeeRepository.save(employee);
 
     }
+
+    //deleteEmployeeById
+    public void deleteEmployeeById(Long id){
+
+        if(employeeRepository.findById(id).isPresent()){
+            employeeRepository.deleteById(id);
+        }
+
+    }
 }
